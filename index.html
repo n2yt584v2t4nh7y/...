@@ -1,0 +1,109 @@
+<!-- saved from url=(0030)https://hg98aer098h.github.io/ -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+
+        window.onload = function () {
+          window.requestAnimationFrame(set_innerHTML)
+        }
+
+        function set_innerHTML() {
+
+            window.setTimeout(function () {
+
+                window.requestAnimationFrame(set_innerHTML)
+
+            }, 1000 / 2)
+
+            document.getElementById("animtime").innerHTML = getDateString();
+        }
+
+        function setStatic() {
+
+            var lines = getDateStringStatic
+        }
+
+        function getDateString() {
+
+            var d = new Date();
+
+            var year = d.getFullYear()  //获取年
+
+            var month = d.getMonth() + 1;  //获取月，从 Date 对象返回月份 (0 ~ 11)，故在此处+1
+
+            var day = d.getDay()    //获取日
+
+            var days = d.getDate() //获取日期
+
+            var hour = d.getHours()   //获取小时
+
+            var minute = d.getMinutes()  //获取分钟
+
+            var second = d.getSeconds()   //获取秒
+
+            //if (month < 10) month = "0" + month
+
+            //if (days < 10) days = "0" + days
+
+            if (hour < 10) hour = "0" + hour
+
+            if (minute < 10) minute = "0" + minute
+
+            if (second < 10) second = "0" + second
+
+            var week = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六")
+
+            var da = month + "月" + days + "日 " + hour + ":" + minute + ":" + second
+
+            return da;
+
+        }
+
+        function getDateStringStatic(dd, hh, mm, ss) {
+
+            var d = new Date();
+            var timestamp = d.getTime();
+            timestamp -= dd * 86400 * 1000;
+
+            d.setTime(timestamp);
+
+            var year = d.getFullYear()  //获取年
+
+            var month = d.getMonth() + 1;  //获取月，从 Date 对象返回月份 (0 ~ 11)，故在此处+1
+
+            var day = d.getDay()    //获取日
+
+            var days = d.getDate() //获取日期
+
+            var hour = hh   //获取小时
+
+            var minute = mm  //获取分钟
+
+            var second = ss   //获取秒
+
+            if (month < 10) month = "0" + month
+
+            if (days < 10) days = "0" + days
+
+            if (hour < 10) hour = "0" + hour
+
+            if (minute < 10) minute = "0" + minute
+
+            if (second < 10) second = "0" + second
+
+            var week = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六")
+
+            var da = year + "-" + month + "-" + days + " " + hour + ":" + minute + ":" + second
+
+            return da;
+
+        }
+    </script>
+
+<body _c_t_common="1" _c_t_j1="1">
+    <div class="content" id="animtime">11月01日 18:16:34</div>
+</body></html>

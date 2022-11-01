@@ -1,0 +1,19 @@
+body{
+    /* font-family: 'Helvetica Neue LT Pro','SimHei',sans-serif; */
+    background-image: url("bg2.png");
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    height: 240vw; 
+}
+
+.content{
+    font-weight: bold;
+    font-size: 8vw;
+
+    color: 000000;
+    width: max-content;
+    position: absolute;
+    top: 18.5vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
